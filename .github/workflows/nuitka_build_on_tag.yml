@@ -22,9 +22,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Dependency Walker (non-interactive)
+        run: |
+          choco install dependencywalker -y --no-progress
+        shell: powershell
+
       - name: Run Nuitka build
         run: |
-          python -m nuitka --standalone --output-dir=build --show-progress --remove-output --include-package=streamlit --include-package=pandas --include-package=fpdf run_app.py
+          python -m nuitka --standalone --jobs=2 --output-dir=build --show-progress --remove-output \
+            --include-package=streamlit --include-package=pandas --include-package=fpdf run_app.py
+        shell: powershell
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
