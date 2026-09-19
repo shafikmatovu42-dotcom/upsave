@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Nuitka build artifacts
+*.dist/
+*_dist/
+*.build/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Database files
+savings_group.db
+
+# Logs and runtime files
+*.log
+
+# Library folder (user said libfolder should be ignored)
+lib/
+
+# Streamlit cache
+.streamlit/
+
+# Environment overrides
+.env
